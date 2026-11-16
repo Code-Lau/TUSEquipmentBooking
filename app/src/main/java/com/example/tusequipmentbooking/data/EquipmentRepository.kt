@@ -13,8 +13,10 @@ class EquipmentRepository(private val database: EquipmentBookingDatabase) {
 
     suspend fun seedIfEmpty() {
         database.withTransaction {
-            if (dao.categoryCount() == 0 && dao.equipmentCount() == 0) {
+            if (dao.categoryCount() == 0) {
                 dao.insertCategories(sampleCategories)
+            }
+            if (dao.equipmentCount() == 0) {
                 dao.insertAllEquipment(sampleEquipment)
             }
         }
