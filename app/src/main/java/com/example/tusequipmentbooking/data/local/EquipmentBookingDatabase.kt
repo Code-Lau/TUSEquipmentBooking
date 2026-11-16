@@ -25,7 +25,8 @@ abstract class EquipmentBookingDatabase : RoomDatabase() {
                     context.applicationContext,
                     EquipmentBookingDatabase::class.java,
                     "equipmentbooking.db"
-                ).build().also { instance = it }
+                ).fallbackToDestructiveMigration(true)
+                 .build().also { instance = it }
             }
     }
 }
