@@ -6,7 +6,6 @@ import androidx.compose.foundation.verticalScroll
 import androidx.compose.material3.*
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.unit.dp
 import com.example.tusequipmentbooking.model.Equipment
 
@@ -14,6 +13,7 @@ import com.example.tusequipmentbooking.model.Equipment
 fun EquipmentDetailsScreen(
     equipment: Equipment,
     categoryName: String,
+    isBooked: Boolean,
     onBack: () -> Unit
 ) {
     Column(
@@ -24,19 +24,16 @@ fun EquipmentDetailsScreen(
         OutlinedButton(onClick = onBack) { Text("Back") }
         Text(categoryName, style = MaterialTheme.typography.labelLarge)
         Text(equipment.name, style = MaterialTheme.typography.headlineMedium)
-        Card(
-            modifier = Modifier.fillMaxWidth(),
-            colors = CardDefaults.cardColors(
-                containerColor = MaterialTheme.colorScheme.surface,
-                contentColor = Color.Black
-            )
-        ) {
+        Card(modifier = Modifier.fillMaxWidth()) {
             Column(
                 Modifier.padding(16.dp),
                 verticalArrangement = Arrangement.spacedBy(8.dp)
             ) {
                 Text("Category: $categoryName")
-                Text("Equipment ID: ${equipment.id}")
+                Text(
+                    if (isBooked) "Availability: Currently booked"
+                    else "Availability: Available"
+                )
             }
         }
         Text("About this equipment", style = MaterialTheme.typography.titleLarge)
