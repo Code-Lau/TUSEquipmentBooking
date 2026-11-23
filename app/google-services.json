@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "671251437313",
+    "project_id": "tusequipmentbooking",
+    "storage_bucket": "tusequipmentbooking.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:671251437313:android:9185adc7dc9893767f6d00",
+        "android_client_info": {
+          "package_name": "com.example.tusequipmentbooking"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD5xSR5ullL1KaAX73t-5uUarn2JtRYQv0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
