@@ -1,4 +1,4 @@
-# TUS Equipment Booking
+# TUS Equipment Booking (https://github.com/Code-Lau/TUSEquipmentBooking)
 
 This is a mobile app that allows users to browse and book equipment.
 It is built entirely in Kotlin and supported by Firebase. A student must log in to book equipment, 
